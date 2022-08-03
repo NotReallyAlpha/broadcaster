@@ -4,7 +4,6 @@ import os
 
 API_ID = int(os.environ['API_ID'])
 API_HASH = os.environ['API_HASH']
-MONGO_DB_URL = os.environ['MONGO_DB_URL']
 PATH = os.environ['DATABASE_PATH']
 TOKEN = os.environ['TOKEN']
 TOKEN1 = os.environ['TOKEN1']
@@ -20,8 +19,6 @@ if len(SUDO) > 1:
 else:
     SUDOS = int(SUDO)
 
-mongo = MongoClient(MONGO_DB_URL)
-db = mongo.PATH
 
 if TOKEN:
     END = Client(":END:", API_ID, API_HASH, TOKEN)
@@ -36,10 +33,21 @@ if TOKEN4:
 if TOKEN5:
     END1 = Client(":END5:", API_ID, API_HASH, TOKEN5)
 
-@END.on_message(filters.command(["broadcast", "pbroadcast"]) & filters.user(SUDOS) & ~filters.edited)
+@END.on_message(filters.command(["broadcast", "pbroadcast"]) & filters.private & filters.user(SUDOS) & ~filters.edited)
 async def broadcaster(_, m):
     reply = m.reply_to_message:
-    chats = await schats()
-    if reply and len(m.command) > 1:
+    if m.reply_to_message:
+        x = m.reply_to_message.message_id
+        y = m.chat.id
+    else:
+        if len(m.command) < 2:
+            return await m.reply_text(
+                "**Usage**:\n/broadcast [MESSAGE] or [Reply to a Message]"
+            )
+        query = m.text.split(None, 1)[1]
+        chat_list = await _.ask(m.from_user.id, "Enter chats as [-123 -234 -345]", filters.text)
+        for chat in chat_list:
+            chat = int(chat)
+            
         
     
