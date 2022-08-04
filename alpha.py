@@ -8,7 +8,6 @@ API_ID = int(os.environ['API_ID'])
 API_HASH = os.environ['API_HASH']
 MONGO_DB_URL = os.environ['MONGO_DB_URL']
 CH = os.environ['COMMAND_HANDLER']
-PATH = os.environ['DATABASE_PATH']
 TOKEN1 = os.environ['TOKEN1']
 TOKEN2 = os.environ['TOKEN2']
 TOKEN3 = os.environ['TOKEN3']
