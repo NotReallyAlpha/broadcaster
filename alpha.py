@@ -15,12 +15,11 @@ TOKEN3 = os.environ['TOKEN3']
 TOKEN4 = os.environ['TOKEN4']
 TOKEN5 = os.environ['TOKEN5']
 SUDO = os.environ['SUDO_USERS'].split()
-if len(SUDO) > 1:
+if SUDO:
     SUDOS = []
     for sudo in SUDO:
         SUDOS.append(int(sudo))
-else:
-    SUDOS = int(SUDO)
+
 
 
 
