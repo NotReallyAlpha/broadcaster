@@ -1,9 +1,11 @@
 from pyrogram import Client, filters
 from pyrogram.types import Message
 import os
+from Database import *
 
 API_ID = int(os.environ['API_ID'])
 API_HASH = os.environ['API_HASH']
+MONGO_DB_URL = os.environ['MONGO_DB_URL']
 PATH = os.environ['DATABASE_PATH']
 TOKEN = os.environ['TOKEN']
 TOKEN1 = os.environ['TOKEN1']
