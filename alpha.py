@@ -6,6 +6,7 @@ from Database import *
 API_ID = int(os.environ['API_ID'])
 API_HASH = os.environ['API_HASH']
 MONGO_DB_URL = os.environ['MONGO_DB_URL']
+CH = os.environ['COMMAND_HANDLER']
 PATH = os.environ['DATABASE_PATH']
 TOKEN1 = os.environ['TOKEN1']
 TOKEN2 = os.environ['TOKEN2']
@@ -34,8 +35,29 @@ if TOKEN5:
     END1 = Client(":END5:", API_ID, API_HASH, TOKEN5)
 
 
-        
-        
-        
-        
+@END1.on_message(filters.command(["broadcast", "pbroadcast"], CH) & filters.group & filters.user(SUDOS))
+async def gc1(_, message):
+    await broadcast(_, message)    
+
+@END2.on_message(filters.command(["broadcast", "pbroadcast"], CH) & filters.group & filters.user(SUDOS))
+async def gc2(_, message):
+    await broadcast(_, message)
+
+@END3.on_message(filters.command(["broadcast", "pbroadcast"], CH) & filters.group & filters.user(SUDOS))
+async def gc3(_, message):
+    await broadcast(_, message)
+
+@END4.on_message(filters.command(["broadcast", "pbroadcast"], CH) & filters.group & filters.user(SUDOS))
+async def gc4(_, message):
+    await broadcast(_, message)
+
+@END5.on_message(filters.command(["broadcast", "pbroadcast"], CH) & filters.group & filters.user(SUDOS))
+async def gc5(_, message):
+    await broadcast(_, message)
     
+        
+END1.run()
+END2.run()
+END3.run()
+END4.run()
+END5.run() 
