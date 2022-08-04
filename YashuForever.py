@@ -1,3 +1,6 @@
+from pyrogram import Client
+from pyrogram.types import Message
+
 async def broadcast(_, message):
     if message.reply_to_message:
         x = message.reply_to_message.message_id
