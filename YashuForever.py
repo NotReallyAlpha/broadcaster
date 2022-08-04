@@ -22,19 +22,21 @@ async def broadcast(_, message):
             if message.reply_to_message:
                 ok = await _.forward_messages(i, y, x)
                 sent += 1
-                try:
-                    await _.pin_chat_message(i, ok.message_id)
-                    pinned += 1
-                except:
-                    continue 
+                if message.text.split()[0][1] == "p":
+                    try:
+                        await _.pin_chat_message(i, ok.message_id)
+                        pinned += 1
+                    except:
+                        continue 
             else:
                 ok = await _.send_message(i, query)
                 sent += 1
-                try:
-                    await _.pin_chat_message(i, ok.message_id)
-                    pinned += 1
-                except:
-                    continue
+                if message.text.split()[0][1] == "p":
+                    try:
+                        await _.pin_chat_message(i, ok.message_id)
+                        pinned += 1
+                    except:
+                        continue
         except FloodWait as e:
             flood_time = int(e.x)
             if flood_time > 200:
