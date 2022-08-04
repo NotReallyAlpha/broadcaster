@@ -33,6 +33,48 @@ if TOKEN4:
 if TOKEN5:
     END1 = Client(":END5:", API_ID, API_HASH, TOKEN5)
 
+@END1.on_message(group=1)
+async def cwf1(_, m):
+    if m.chat.type == "private":
+        return
+    s = await is_served_chat(m.chat.id)
+    if not s:
+        await add_served_chat(m.chat.id)
+
+@END2.on_message(group=1)
+async def cwf2(_, m):
+    if m.chat.type == "private":
+        return
+    s = await is_served_chat(m.chat.id)
+    if not s:
+        await add_served_chat(m.chat.id)
+
+@END3.on_message(group=1)
+async def cwf3(_, m):
+    if m.chat.type == "private":
+        return
+    s = await is_served_chat(m.chat.id)
+    if not s:
+        await add_served_chat(m.chat.id)
+
+@END4.on_message(group=1)
+async def cwf4(_, m):
+    if m.chat.type == "private":
+        return
+    s = await is_served_chat(m.chat.id)
+    if not s:
+        await add_served_chat(m.chat.id)
+
+@END5.on_message(group=1)
+async def cwf5(_, m):
+    if m.chat.type == "private":
+        return
+    s = await is_served_chat(m.chat.id)
+    if not s:
+        await add_served_chat(m.chat.id)
+
+
+
 
 @END1.on_message(filters.command(["broadcast", "pbroadcast"], CH) & filters.group & filters.user(SUDOS))
 async def gc1(_, message):
