@@ -72,10 +72,15 @@
       "required": true,
       "value": ""
     },
-    "SUDO_USER": {
-      "description": "omfoo",
+    "SUDO_USERS": {
+      "description": "Split if more than one",
       "required": true,
-      "value": "1927705508 1300561364"
+      "value": ""
+    },
+    "COMMAND_HANDLER": {
+      "description": "Example - "!, /, ?, &",
+      "required": true,
+      "value": "/"
     }
   }
 }
