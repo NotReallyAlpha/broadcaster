@@ -1,4 +1,4 @@
-from pyrogram import Client, filters
+from pyrogram import Client, filters, idle
 from pyrogram.types import Message
 import os
 from Database import *
@@ -97,8 +97,19 @@ async def gc5(_, message):
     await broadcast(_, message)
     
         
-END1.run()
-END2.run()
-END3.run()
-END4.run()
-END5.run() 
+END1.start()
+ME1 = END1.get_me()
+UN1 = ME1.username
+END2.start()
+ME2 = END2.get_me()
+UN2 = ME2.username
+END3.start()
+ME3 = END3.get_me()
+UN3 = ME3.username
+END4.start()
+ME4 = END4.get_me()
+UN4 = ME4.username
+END5.start() 
+ME5 = END5.get_me()
+UN5 = ME5.username
+idle()
