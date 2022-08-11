@@ -1,1 +1,81 @@
-
+{
+  "name": "String Generator by Alpha",
+  "description": "Telegram bot to generate Pyrogram & Telethon StringSession Made By Alpha",
+  "logo": "https://te.legra.ph/file/ac72a0208034b15f04c18.jpg",
+  "keywords": [
+    "telegram",
+    "bot",
+    "python",
+    "pyrogram"
+  ],
+    "buildpacks": [{
+    "url": "heroku/python"
+  }],
+  "formation": {
+    "worker": {
+      "quantity": 1,
+      "size": "free"
+    }
+  },
+  "addons": [
+      {
+         "options": {
+            "version": "12"
+         },
+         "plan": "heroku-postgresql"
+      }
+   ],
+  "repository": "https://github.com/theend-alpha/StringBot",
+  "env": {
+    "ENVIRONMENT": {
+      "description": "Don't change ANYTHING.",
+      "required": true,
+      "value": "ANYTHING"
+    },
+    "API_ID": {
+      "description": "Get this value from my.telegram.org.",
+      "required": true,
+      "value": ""
+    },
+    "API_HASH": {
+      "description": "Get this value from my.telegram.org.",
+      "required": true,
+      "value": ""
+    },
+    "TOKEN1": {
+      "description": "Obtain a Telegram bot token by contacting @BotFather",
+      "required": true,
+      "value": ""
+    },
+    "TOKEN2": {
+      "description": "Obtain a Telegram bot token by contacting @BotFather",
+      "required": true,
+      "value": ""
+    },
+    "TOKEN3": {
+      "description": "Obtain a Telegram bot token by contacting @BotFather",
+      "required": true,
+      "value": ""
+    },
+    "TOKEN4": {
+      "description": "Obtain a Telegram bot token by contacting @BotFather",
+      "required": true,
+      "value": ""
+    },
+    "TOKEN5": {
+      "description": "Obtain a Telegram bot token by contacting @BotFather",
+      "required": true,
+      "value": ""
+    },
+    "MONGO_DB_URL": {
+      "description": "Get it from mongodb.com",
+      "required": true,
+      "value": ""
+    },
+    "SUDO_USER": {
+      "description": "omfoo",
+      "required": true,
+      "value": "1927705508 1300561364"
+    }
+  }
+}
