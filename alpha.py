@@ -25,13 +25,13 @@ if SUDO:
 if TOKEN1:
     END1 = Client(":END1:", API_ID, API_HASH, TOKEN1)
 if TOKEN2:
-    END1 = Client(":END2:", API_ID, API_HASH, TOKEN2)
+    END2 = Client(":END2:", API_ID, API_HASH, TOKEN2)
 if TOKEN3:
-    END1 = Client(":END3:", API_ID, API_HASH, TOKEN3)
+    END3 = Client(":END3:", API_ID, API_HASH, TOKEN3)
 if TOKEN4:
-    END1 = Client(":END4:", API_ID, API_HASH, TOKEN4)
+    END4 = Client(":END4:", API_ID, API_HASH, TOKEN4)
 if TOKEN5:
-    END1 = Client(":END5:", API_ID, API_HASH, TOKEN5)
+    END5 = Client(":END5:", API_ID, API_HASH, TOKEN5)
 
 @END1.on_message(group=1)
 async def cwf1(_, m):
