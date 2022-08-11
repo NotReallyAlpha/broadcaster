@@ -1,5 +1,6 @@
 from motor.motor_asyncio import AsyncIOMotorClient as MongoClient 
-from alpha import MONGO_DB_URL
+
+MONGO_DB_URL = os.environ['MONGO_DB_URL']
 
 mongo = MongoClient(MONGO_DB_URL)
 db = mongo.GCP
