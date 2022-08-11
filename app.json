@@ -78,7 +78,7 @@
       "value": ""
     },
     "COMMAND_HANDLER": {
-      "description": "Example - "!, /, ?, &",
+      "description": "Example - !, /, ?, &",
       "required": true,
       "value": "/"
     }
